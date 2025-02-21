@@ -4,6 +4,7 @@ import MyButton from "../../Components/myButton";
 import CalcButton from "../../Components/calcButton";
 import ExpButton from "../../Components/expButton";
 import data from "./../../data";
+import Footer from "../../Components/footer";
 
 const Home = () => {
     // 현재레벨, 목표레벨
@@ -211,6 +212,7 @@ const Home = () => {
                     {needTime} 시간
                 </p>
             </div>
+            <Footer />
         </div>
     );
 };
