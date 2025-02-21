@@ -43,6 +43,11 @@ const data = {
         { id: "1000000", name: "100만", value: "1000000" },
         { id: "5000000", name: "500만", value: "5000000" },
     ],
+
+    expTypeList: [
+        { id: "pure", name: "순수" },
+        { id: "percent", name: "퍼센트" },
+    ],
 };
 
 export default data;

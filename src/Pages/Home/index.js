@@ -6,13 +6,20 @@ import ExpButton from "../../Components/expButton";
 import data from "./../../data";
 
 const Home = () => {
+    // 현재레벨, 목표레벨
     const [currentLvl, setCurrentLvl] = useState("");
     const [targetLvl, setTargetLvl] = useState("");
+
+    // 경험치 타입
+    const [expType, setExpType] = useState("pure");
+
     const [currentExp, setCurrentExp] = useState("");
     const [exp, setExp] = useState("");
 
+    // 시간 타입
     const [nowTime, setNowTime] = useState(5);
 
+    // 필요시간
     const [needTime, setNeedTime] = useState(0);
 
     // 에러메시지
@@ -80,7 +87,14 @@ const Home = () => {
             needExp += Number(data.exps[i]);
         }
 
-        needExp = currentExp ? needExp - Number(currentExp) : needExp;
+        let convertExp = currentExp;
+
+        if (currentExp && expType === "percent") {
+            const allExp = data.exps[numCurrentLvl];
+            convertExp = (allExp / 100) * currentExp;
+        }
+
+        needExp = convertExp ? needExp - Number(convertExp) : needExp;
         let resultTime = ((needExp / exp) * Number(nowTime)) / 60;
         resultTime = Math.round(resultTime * 1000) / 1000;
         setNeedTime(resultTime);
@@ -115,14 +129,28 @@ const Home = () => {
                         />
                     </div>
                 </div>
-                <MyInput
-                    id="3"
-                    type="text"
-                    onChange={onChangeCurrentExp}
-                    maxlength={12}
-                    value={currentExp}
-                    placeholder="현재 경험치"
-                ></MyInput>
+                <div className="space-y-3">
+                    <div className="flex space-x-1">
+                        {data.expTypeList.map((type) => (
+                            <div key={type.id}>
+                                <MyButton
+                                    active={expType === type.id}
+                                    onClick={() => setExpType(type.id)}
+                                >
+                                    {type.name}
+                                </MyButton>
+                            </div>
+                        ))}
+                    </div>
+                    <MyInput
+                        id="3"
+                        type="text"
+                        onChange={onChangeCurrentExp}
+                        maxlength={12}
+                        value={currentExp}
+                        placeholder="현재 경험치"
+                    ></MyInput>
+                </div>
             </div>
             <div className="space-y-3">
                 <div className="flex space-x-1">
