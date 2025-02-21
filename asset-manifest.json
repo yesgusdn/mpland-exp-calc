@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/yesgusdn/mpland-exp-calc/static/css/main.89144822.css",
-    "main.js": "/yesgusdn/mpland-exp-calc/static/js/main.0bde4681.js",
-    "static/js/453.a0a5b01e.chunk.js": "/yesgusdn/mpland-exp-calc/static/js/453.a0a5b01e.chunk.js",
-    "index.html": "/yesgusdn/mpland-exp-calc/index.html",
-    "main.89144822.css.map": "/yesgusdn/mpland-exp-calc/static/css/main.89144822.css.map",
-    "main.0bde4681.js.map": "/yesgusdn/mpland-exp-calc/static/js/main.0bde4681.js.map",
-    "453.a0a5b01e.chunk.js.map": "/yesgusdn/mpland-exp-calc/static/js/453.a0a5b01e.chunk.js.map"
+    "main.css": "/mpland-exp-calc/static/css/main.89144822.css",
+    "main.js": "/mpland-exp-calc/static/js/main.29787345.js",
+    "static/js/453.a0a5b01e.chunk.js": "/mpland-exp-calc/static/js/453.a0a5b01e.chunk.js",
+    "index.html": "/mpland-exp-calc/index.html",
+    "main.89144822.css.map": "/mpland-exp-calc/static/css/main.89144822.css.map",
+    "main.29787345.js.map": "/mpland-exp-calc/static/js/main.29787345.js.map",
+    "453.a0a5b01e.chunk.js.map": "/mpland-exp-calc/static/js/453.a0a5b01e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.89144822.css",
-    "static/js/main.0bde4681.js"
+    "static/js/main.29787345.js"
   ]
 }
