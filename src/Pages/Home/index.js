@@ -76,6 +76,13 @@ const Home = () => {
             numTargetLvl <= numCurrentLvl
         ) {
             setErrorMsg("레벨을 재설정해주세요.");
+            setNeedTime(0);
+            return;
+        }
+
+        if (expType === "percent" && currentExp >= 100) {
+            setErrorMsg("경험치는 100%를 넘을 수 없습니다.");
+            setNeedTime(0);
             return;
         }
 
