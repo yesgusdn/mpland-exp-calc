@@ -81,7 +81,6 @@ const Home = () => {
         }
 
         needExp = currentExp ? needExp - Number(currentExp) : needExp;
-        console.log(1);
         let resultTime = ((needExp / exp) * Number(nowTime)) / 60;
         resultTime = Math.round(resultTime * 1000) / 1000;
         setNeedTime(resultTime);
