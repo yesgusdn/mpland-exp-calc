@@ -2,7 +2,7 @@
     "short_name": "Mpland Exp Calc",
     "name": "Mpland Exp Calc",
     "icons": [],
-    "start_url": "/mpland-exp-calc/",
+    "start_url": "",
     "display": "standalone",
     "theme_color": "#000000",
     "background_color": "#ffffff"
